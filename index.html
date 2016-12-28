@@ -1,0 +1,722 @@
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Oswald" rel="stylesheet">
+<style type="text/css">
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* Unbounce Overrides */
+div.lp-pom-root, .cke-text{
+	line-height: 150%
+}
+html body .lp-element.lp-pom-root#lp-pom-root{
+	min-width: 0px !important;
+	background-color: #ffffff !important;
+}
+html,
+body,
+#lp-pom-block-8-color-overlay,
+.lp-pom-block-content,
+.lp-pom-body,
+.lp-pom-root,
+.lp-code,
+.lp-positioned-content{
+	width: 100% !important;
+	height: auto !important;
+	left: 0 !important;
+	position: static;
+	margin-left: 0px !important;
+	padding: 0px !important;
+	border: 0px !important;
+}
+#lp-pom-root-color-overlay,
+#lp-pom-block-29,
+#lp-pom-block-30,
+#lp-pom-block-31,
+#lp-pom-box-33-color-overlay{
+	display: none !important;
+}
+#lp-code-34{
+	position: static !important;
+}
+#lp-pom-box-33{
+	width: 70%;
+	height: auto !important;
+	position: relative !important;
+	top: 0px !important;
+	left: 0px !important;
+	padding: 15% !important;
+	z-index: 1 !important;
+	border: 0px !important;
+}
+#lp-code-32{
+	height: auto !important;
+	position: fixed !important;
+	top: 0px !important;
+	left: 0px !important;
+	z-index: 3 !important;
+	overflow: visible !important;
+	border: 0px !important;
+}
+#lp-pom-text-24{
+	position: static !important;
+	display: block !important;
+	width: 100% !important;
+  	padding-top: 70px !important;
+	margin-bottom: 25px !important;
+}
+#lp-pom-image-35{
+	position: static !important;
+  	max-width: 300px !important;
+	display: block !important;
+	margin: 0 auto !important;
+  }
+#lp-pom-image-35 .lp-pom-image-container{
+	width: 100% !important;
+	height: auto !important;
+}
+#lp-pom-image-35 .lp-pom-image-container img{
+	width: 100% !important;
+	margin: 0 auto !important;
+  	max-width: 300px !important;
+	height: auto !important;
+}
+#lp-pom-image-35 img{
+  	max-width: 300px !important;
+  height: auto !important;
+}
+body{
+	background-color: #ffffff;
+}
+/* Reusable Elements */
+.clear{
+	clear: both;
+}
+.clearfix::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+strong{
+	font-weight: bold;
+	color: #303030;
+}
+/* Default */
+body{
+	font-family: "Open Sans", Arial,sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 150%;
+	color: #818181;
+}
+/* Wrapper */
+.content-wrapper{
+	position: relative;
+	padding: 0px 25px;
+}
+
+/* Typography */
+  
+#lp-pom-text-24{
+	font-size: 36px !important;
+	line-height: 150% !important;
+	text-transform: uppercase !important;
+}
+.headline{
+	margin-bottom: 25px;
+	font-family: Oswald, "Open Sans", Arial,sans-serif;
+	font-size: 48px;
+	line-height: 150%;
+	color: #303030;
+	text-transform: uppercase;
+}
+h1{
+	line-height: 150%;
+}
+h2{
+	margin-bottom: 25px;
+	font-family: "Open Sans", Arial,sans-serif;
+	font-size: 24px;
+	line-height: 150%;
+	font-weight: 400;
+	color: #303030;
+	text-transform: uppercase;
+	text-align: center;
+}
+h3{
+	font-weight: 400;
+}
+p{
+	font-size: 16px;
+	line-height: 150%;
+	margin-bottom: 25px;
+}
+a{
+	color: #7fb742;
+	text-decoration: underline;
+}
+li{
+	font-size: 16px;
+	line-height: 150%;
+	padding-left: 15px;
+	margin-bottom: 25px;
+}
+label{
+	display: block;
+	margin-bottom: 15px;
+	font-family: "Open Sans", Arial,sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: #303030;
+	text-transform: uppercase;
+}
+/* Sections */
+.section{
+	padding: 50px 0px;
+}
+/* Header */
+#blm-header{
+	width: 100%;
+	padding: 0px;
+	background-color: rgba(0,0,0,0.5);
+}
+#logo img{
+	display: block;
+	width: 40%;
+	margin: 0 auto;
+	padding: 5px;
+}
+/* In the News */
+#in-the-news{
+	background-color: #f6f6f6;
+}
+.horizontal-slider{
+	padding: 25px 0px;
+	text-align: center;
+}
+.horizontal-slider .content-wrapper{
+	height: 38px;
+	overflow: hidden;
+}
+.horizontal-slider img{
+	margin-right: 25px;
+    filter: grayscale(100%);
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+}
+/* Checkmarks */
+#checkmarks{
+	padding: 25px 0px;
+}
+.checkmark{
+	display: block;
+	width: 150px;
+	height: 32px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	padding-left: 47px;
+	line-height: 32px;
+	color: #7f7f7f;
+	text-align: left;
+	background-image: url("https://blooom-static.s3.amazonaws.com/lp/images/checkmark.png");
+	background-repeat: no-repeat;
+}
+/* Benefits */
+#benefits{
+	padding: 50px 0px;
+	background-color: #f0f0f0;
+	text-align: center;
+}
+#benefits h2{
+	margin-bottom: 50px;
+}
+#benefits .column{
+	background-color: #ffffff;
+	margin-bottom: 25px;
+	padding: 25px;
+}
+#benefits .column h3{
+	margin-bottom: 25px;
+	text-transform: uppercase;
+	color: #303030;
+}
+#benefits .column img{
+	margin-bottom: 25px;
+}
+/* Statistics */
+#statistics{
+	padding-top: 50px;
+	padding-bottom: 25px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #ffa011;
+	background: linear-gradient(#ffa011, #d8801f);
+	background: -webkit-linear-gradient(#ffa011, #d8801f);
+	background: -o-linear-gradient(#ffa011, #d8801f);
+	background: -moz-linear-gradient(#ffa011, #d8801f);
+}
+.statistic{
+	margin-bottom: 25px;
+}
+.statistic .number{
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 48px;
+	line-height: 48px;
+	font-weight: 400;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.statistic .definition{
+	font-size: 18px;
+	margin-bottom: 0px;
+	font-weight: 300;
+}
+/* Companies */
+#companies{
+	padding: 25px 0px;
+}
+/* Security */
+#security{
+	padding: 50px 0px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #72af24;
+}
+#security h2{
+	color: #ffffff;
+}
+#security img{
+	display: block;
+	max-width: 50%;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+#security ul{
+	display: block;
+	margin-bottom: 50px;
+	text-align: center;
+}
+#security li{
+	max-width: 200px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	list-style: none;
+	text-align: left;
+	background-image: url("https://blooom-static.s3.amazonaws.com/lp/images/security-check.png");
+	background-repeat: no-repeat;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 45px;
+}
+#security a{
+	display: block;
+	max-width: 300px;
+	margin: 0 auto;
+	color: #ffffff;
+	padding: 10px 20px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #ffffff;
+	border-radius: 99px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#security a:hover{
+	background-color: #303030;
+}
+/* Footer */
+#footer{
+	display: block;
+	padding: 25px 0px;
+	font-family: "Open Sans", Arial,sans-serif;
+	font-size: 13px;
+	color: #ffffff;
+	background-color: #1b1b1b;
+}
+/* Footer */
+#footer-nav{
+	display: none;
+	text-align: center;
+	margin-bottom: 25px;
+}
+#footer-menu-toggle:checked ~ #footer-nav{
+	display: block;
+}
+#footer-nav .nav-item{
+	margin: 0px;
+	list-style: none;
+	border-top-style: solid;
+	border-width: 1px;
+	border-color: rgba(255,255,255,0.1);
+	text-align: center;
+}
+#footer-nav .nav-item:first-child{
+	border-top-style: none;
+}
+#footer-nav a{
+	display: block;
+	padding: 5px 0px;
+	color: #ffffff;
+	text-decoration: none;
+}
+#social{
+	text-align: center;
+}
+#social a{
+	text-decoration: none;
+	padding: 0px 3px;
+}
+#social img{
+	width: 35px;
+}
+.copyright{
+	text-align: center;
+	margin-bottom: 0px;
+}
+/* Buttons */
+.button{
+	display: block;
+	max-width: 500px;
+	margin: 0 auto;
+	border-radius: 99px;
+	padding: 10px 20px;
+	text-align: center;
+	line-height: 24px;
+	font-family: "Open Sans", Arial,sans-serif;
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
+	background-color: #7fb742;
+	cursor: pointer;
+}
+.button:hover{
+	background-color: #262626;
+}
+
+/* Mobile */
+@media only screen and (max-width: 480px){
+	/* Header */
+	#blm-header{
+	}
+	#logo img{
+		width: 50%;
+	}
+	/* Feature */
+	li{
+		margin-bottom: 15px;
+	}
+	/* In the News */
+	#in-the-news img{
+		width: 100px;
+	}
+}
+/* Tablet */
+@media only screen and (min-width: 480px){
+	/* Header */
+	#logo img{
+		width: 33%;
+	}
+	/* Large Quote */
+	#large-quote h1{
+		font-size: 24px;
+	}
+	#large-quote img{
+		width: 50%;
+	}
+}
+/* Desktop */
+@media only screen and (min-width: 768px){
+	/* Wrapper */
+	.content-wrapper{
+		margin: 0 auto;
+		padding: 0px 25px;
+	}
+	/* Header */
+	#logo{
+		margin-top: 25px;
+	}
+	#logo img{
+		width: 200px;
+	}
+	/* Masthead */
+#lp-pom-box-33{
+	padding-top: 100px !important;
+  	padding-bottom: 100px !important;
+  }
+  	
+#lp-pom-text-24{
+	font-size: 48px !important;
+  }
+	/* Content */
+	.article{
+		width: 575px;
+	}
+	/* Checkmarks */
+	#checkmarks{
+		text-align: center;
+	}
+	.checkmark{
+		display: inline-block;
+		text-align: center;
+		width: auto;
+		margin: auto;
+		padding-right: 50px;
+	}
+	.checkmark:last-child{
+		padding-right: 0px;
+	}
+	/* Benefits */
+	#benefits .four-columns .column{
+		width: 38%;
+		height: 245px;
+		float: left;
+		padding-right: 4%;
+		padding-left: 4%;
+		margin: 0px 2%;
+		margin-bottom: 25px;
+	}
+	/* Statistics */
+	#statistics{
+		padding-top: 100px;
+		padding-bottom: 75px;
+	}
+	.statistic{
+		display: inline-block;
+		padding: 0px 50px;
+		margin-bottom: 25px;
+	}
+	.statistic:first-child{
+		padding-left: 0px;
+	}
+	.statistic:last-child{
+		padding-right: 0px;
+	}
+	/* Security */
+	#security .clearfix{
+		width: 500px;
+		margin: 0 auto;
+	}
+	#security img{
+		float: left;
+	}
+	#security ul{
+		margin-top: 50px;
+		float: right;
+	}
+	#security a{
+		clear: both;
+	}
+}
+/* Desktop - Standard */
+@media only screen and (min-width: 935px){
+	#logo{
+		margin-top: 0px;
+	}
+	/* Benefits */
+	#benefits .four-columns .column{
+		width: 19%;
+		height: 350px;
+		padding-right: 2%;
+		padding-left: 2%;
+		margin: 0px 1%;
+		margin-bottom: 50px;
+	}
+}
+/* Large Desktop */
+@media only screen and (min-width: 1000px){
+	.content-wrapper{
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 0px 25px;
+	}
+	#main-headline{
+		width: 550px;
+	}
+}
+</style>
+<!--
+
+
+END OF STYLESHEET
+
+
+-->
+<div id="blm-header">		
+	<div class="content-wrapper clearfix">
+		<a href="http://blooom.com" title="blooom inc homepage" id="logo">
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/blooom-logo-white.png" alt="blooom inc"/>
+		</a>
+	</div><!-- .content-wrapper -->
+</div>
+<!-- 
+
+
+END OF HEADER
+
+
+-->
+<div class="horizontal-slider" id="in-the-news">
+	<div class="content-wrapper">
+		<img src="https://blooom-static.s3.amazonaws.com/lp/images/forbes.png" alt="Forbes" class="news-source"/>
+		<img src="https://blooom-static.s3.amazonaws.com/lp/images/cnbc.png" alt="CNBC" class="news-source"/>
+		<img src="https://blooom-static.s3.amazonaws.com/lp/images/reuters.png" alt="Reuters" class="news-source"/>
+		<img src="https://blooom-static.s3.amazonaws.com/lp/images/msn.png" alt="MSN" class="news-source"/>
+		<img src="https://blooom-static.s3.amazonaws.com/lp/images/business-insider.png" alt="Business Insider" class="news-source"/>
+		<img src="https://blooom-static.s3.amazonaws.com/lp/images/barrons.png" alt="Barrons" class="news-source"/>
+		<img src="https://blooom-static.s3.amazonaws.com/lp/images/yahoo-finance.png" alt="Yahoo Finance" class="news-source"/>
+		<img src="https://blooom-static.s3.amazonaws.com/lp/images/time.png" alt="Time" class="news-source"/>
+	</div><!-- .content-wrapper -->
+</div><!-- #in-the-news -->
+<div id="checkmarks">
+	<div class="content-wrapper">
+		<div class="checkmark">
+			Fast
+		</div>
+		<div class="checkmark">
+			Easy
+		</div>
+		<div class="checkmark">
+			Free Analysis
+		</div>
+	</div><!-- .content-wrapper -->
+</div><!-- #checkmarks -->
+<div id="benefits">
+	<div class="content-wrapper">
+		<h2>
+			More benefits to you
+		</h2>
+		<div class="columns four-columns clearfix">
+			<div class="column column-1">
+				<h3>
+					Peace of mind standard
+				</h3>
+				<img src="https://blooom-static.s3.amazonaws.com/lp/images/icon-peace-of-mind.png" alt="Peace Sign" />
+				<p>
+					The second guessing and worrying ends here. You can rest easy knowing a professional advisor is handling things from here on out.
+				</p>
+			</div>
+			<div class="column column-2">
+				<h3>
+					FINANCE 101 NOT REQUIRED
+				</h3>
+				<img src="https://blooom-static.s3.amazonaws.com/lp/images/icon-101.png" alt="Mortarboard" />
+				<p>
+					No more poring over 401k investments that read like they are written in a foreign language. You can toss all that in the trash.
+				</p>
+			</div>
+			<div class="column column-3">
+				<h3>
+					YOU OWE IT TO YOURSELF
+				</h3>
+				<img src="https://blooom-static.s3.amazonaws.com/lp/images/icon-owe.png" alt="Coin" />
+				<p>
+					You and your family are going to depend on your 401k someday. You better get it right. And if you aren’t doing it, you better find someone to do it for you.
+				</p>
+			</div>
+			<div class="column column-4">
+				<h3>
+					BETTER RESULTS
+				</h3>
+				<img src="https://blooom-static.s3.amazonaws.com/lp/images/icon-results.png" alt="Graph" />
+				<p>
+					Professional advisory assistance has been shown to provide you with a greater potential long-term return. Of course, using your in-laws is still an option. We just think we’re better at it.
+				</p>
+			</div>
+		</div>
+		<a href="https://secure.blooom.com" class="button">
+			ONLY TAKES A FEW MINUTES, GIVE IT A TRY!
+		</a>
+	</div><!-- .content-wrapper -->
+</div><!-- #benefits -->
+<div id="statistics">
+	<div class="content-wrapper">
+		<div class="statistic">
+			<p class="number">
+				27,555
+			</p><!-- .number -->
+			<p class="definition">
+				401ks Analyzed
+			</p><!-- .definition -->
+		</div><!-- .statistic -->
+		<div class="statistic">
+			<p class="number">
+				$1.6 Billion
+			</p><!-- .number -->
+			<p class="definition">
+				Total Assets Analyzed
+			</p><!-- .definition -->
+		</div><!-- .statistic -->
+		<div class="statistic">
+			<p class="number">
+				83%
+			</p><!-- .number -->
+			<p class="definition">
+				401ks Invested Incorrectly
+			</p><!-- .definition -->
+		</div><!-- .statistic -->
+	</div><!-- .content-wrapper -->
+</div><!-- #statistics -->
+<div id="companies">
+	<div class="content-wrapper">
+		<h2>
+			Just some of the companies where blooom clients can be found
+		</h2>
+	</div><!-- .content-wrapper -->
+	<div class="horizontal-slider">
+		<div class="content-wrapper">
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/apple-logo.png" alt="Apple" class="news-source"/>
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/webmd-logo.png" alt="WebMD" class="news-source"/>
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/linkedin-logo.png" alt="LinkedIn" class="news-source"/>
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/amazon-logo.png" alt="Amazon" class="news-source"/>
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/tesla-logo.png" alt="Tesla" class="news-source"/>
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/the-dave-ramsey-show-logo.png" alt="Dave Ramsey" class="news-source"/>
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/cisco-logo.png" alt="Cisco" class="news-source"/>
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/john-deere-logo.png" alt="John Deere" class="news-source"/>
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/ibm-logo.png" alt="IBM" class="news-source"/>
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/timewarnercable-logo.png" alt="Time  Warner Cable" class="news-source"/>
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/verizon-logo.png" alt="Verizon" class="news-source"/>
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/oracle-logo.png" alt="Oracle" class="news-source"/>
+		</div><!-- .content-wrapper -->
+	</div><!-- .horizontal-slider -->
+</div><!-- #companies -->
+<div id="security">
+	<div class="content-wrapper">
+		<h2>
+			Security
+		</h2>
+		<p>
+			Rest assured your money is safe and sound.
+		</p>
+		<div class="clearfix">
+			<img src="https://blooom-static.s3.amazonaws.com/lp/images/shield-for-web.png" alt="shield" />
+			<ul>
+				<li>
+					256-bit encryption
+				</li>
+				<li>
+					Bank-level security
+				</li>
+				<li>
+					24/7 Hacker/Virus Scans
+				</li>
+				<li>
+					Third Party Verification
+				</li>
+			</ul>
+		</div><!-- .clearfix -->
+		<a href="https://secure.blooom.com/">Start my analysis</a>
+	</div><!-- .content-wrapper -->
+</div><!-- #security -->
+<div id="footer">
+	<div class="content-wrapper">
+		<p class="copyright">
+			&copy; 2016 blooom, inc.
+		</p>
+	</div><!-- .content-wrapper -->
+</div><!-- .footer -->
