@@ -1,5 +1,5 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Muli:300,800|Open+Sans:300,400,700" rel="stylesheet">
 <style type="text/css">
 /* CSS Reset */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -21,79 +21,29 @@ html body .lp-element.lp-pom-root#lp-pom-root{
 html,
 body,
 #lp-pom-block-8-color-overlay,
+.lp-element,
+.lp-pom-block,
 .lp-pom-block-content,
 .lp-pom-body,
 .lp-pom-root,
 .lp-code,
 .lp-positioned-content{
-	width: 100% !important;
-	height: auto !important;
-	left: 0 !important;
-	position: static;
-	margin-left: 0px !important;
-	padding: 0px !important;
-	border: 0px !important;
-}
-#lp-pom-root-color-overlay,
-#lp-pom-block-29,
-#lp-pom-block-30,
-#lp-pom-block-31,
-#lp-pom-box-33-color-overlay{
-	display: none !important;
-}
-#lp-code-34{
-	position: static !important;
-}
-#lp-pom-box-33{
-	width: 70%;
-	height: auto !important;
-	position: relative !important;
-	top: 0px !important;
-	left: 0px !important;
-	padding: 15% !important;
-	z-index: 1 !important;
-	border: 0px !important;
-}
-#lp-code-32{
-	height: auto !important;
-	position: fixed !important;
-	top: 0px !important;
-	left: 0px !important;
-	z-index: 3 !important;
-	overflow: visible !important;
-	border: 0px !important;
-}
-#lp-pom-text-24{
-	position: static !important;
-	display: block !important;
-	width: 100% !important;
-  	padding-top: 70px !important;
-	margin-bottom: 25px !important;
-}
-#lp-pom-image-35{
-	position: static !important;
-  	max-width: 300px !important;
-	display: block !important;
-	margin: 0 auto !important;
-  }
-#lp-pom-image-35 .lp-pom-image-container{
-	width: 100% !important;
-	height: auto !important;
-}
-#lp-pom-image-35 .lp-pom-image-container img{
-	width: 100% !important;
-	margin: 0 auto !important;
-  	max-width: 300px !important;
-	height: auto !important;
-}
-#lp-pom-image-35 img{
-  	max-width: 300px !important;
+  width: 100% !important;
   height: auto !important;
+  left: 0 !important;
+  margin-left: 0px !important;
+  padding: 0px !imporant;
 }
 body{
 	background-color: #ffffff;
 }
 /* Reusable Elements */
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
 .clear{
 	clear: both;
 }
@@ -102,9 +52,15 @@ body{
 	clear: both;
 	display: table;
 }
+.row{
+	position: relative;
+}
+.column{
+	position: relative;
+}
 strong{
 	font-weight: bold;
-	color: #303030;
+	color: #777777;
 }
 /* Default */
 body{
@@ -119,21 +75,19 @@ body{
 	position: relative;
 	padding: 0px 25px;
 }
-
-/* Typography */
-  
-#lp-pom-text-24{
-	font-size: 36px !important;
-	line-height: 150% !important;
-	text-transform: uppercase !important;
+#feature .content-wrapper{
+	padding-top: 70px;
 }
+/* Typography */
 .headline{
 	margin-bottom: 25px;
-	font-family: Oswald, "Open Sans", Arial,sans-serif;
-	font-size: 48px;
-	line-height: 150%;
-	color: #303030;
-	text-transform: uppercase;
+	font-family: Muli,"Open Sans", Arial,sans-serif;
+	font-size: 34px;
+	line-height: 125%;
+	color: #ffffff;
+	font-weight: 800;
+	text-transform: lowercase;
+	letter-spacing: 1px;
 }
 h1{
 	line-height: 150%;
@@ -160,6 +114,9 @@ a{
 	color: #7fb742;
 	text-decoration: underline;
 }
+ul{
+	margin-left: 15px;
+}
 li{
 	font-size: 16px;
 	line-height: 150%;
@@ -182,6 +139,10 @@ label{
 /* Header */
 #blm-header{
 	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 999999;
 	padding: 0px;
 	background-color: rgba(0,0,0,0.5);
 }
@@ -191,7 +152,72 @@ label{
 	margin: 0 auto;
 	padding: 5px;
 }
-/* Hotizontal Slider */
+/* Feature */
+#feature{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	padding: 50px 0px;
+	text-align: center;
+}
+#feature-background{
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url("https://blooom-static.s3.amazonaws.com/lp/images/clipboard-bg-2.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#feature .headline{
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	color: #ffffff;
+	text-transform: lowercase;
+}
+.sub-headline{
+	display: none;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	text-align: center;
+	font-family: Muli,"Open Sans", Arial,sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 125%;
+	color: #ffffff;
+	text-transform: lowercase;
+}
+#primary-conversion{
+	background-color: #ffffff;
+	color: #7fb742;
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#primary-conversion:hover{
+	background-color: #303030;
+	color: #ffffff;
+}
+#primary-conversion .strong{
+	font-weight: bold;
+}
+/* Tagline */
+#tagline{
+	padding: 25px 0px;
+}
+#tagline h2{
+	font-size: 18px;
+	margin-bottom: 0px;
+}
+/* Horizontal Slider */
 .horizontal-slider{
 	padding: 25px 0px;
 	text-align: left
@@ -214,46 +240,101 @@ label{
 }
 /* In the News */
 #in-the-news{
-	background-color: #f6f6f6;
 }
-/* Checkmarks */
-#checkmarks{
-	padding: 25px 0px;
-}
-.checkmark{
-	display: block;
-	width: 150px;
-	height: 32px;
-	margin: 0 auto;
-	margin-bottom: 15px;
-	padding-left: 47px;
-	line-height: 32px;
-	color: #7f7f7f;
-	text-align: left;
-	background-image: url("https://blooom-static.s3.amazonaws.com/lp/images/checkmark.png");
-	background-repeat: no-repeat;
-}
-/* Benefits */
-#benefits{
-	padding: 50px 0px;
+/* Mistakes */
+#mistakes{
 	background-color: #f0f0f0;
 	text-align: center;
 }
-#benefits h2{
-	margin-bottom: 50px;
+#mistakes img{
+	display: block;
+	margin: 0 auto;
 }
-#benefits .column{
-	background-color: #ffffff;
-	margin-bottom: 25px;
-	padding: 25px;
+
+#mistakes .number-bullet{
+	font-weight: normal;
+	font-size: 24px;
+	border-color: #e48b29;
+	color: #e48b29;
 }
-#benefits .column h3{
+#mistakes .column-right{
+	text-align: center;
+}
+/* Mission */
+#mission{
+	padding: 50px 0px;
+	background-color: #72af24;
+	background-color: #555555;
+	color: #ffffff;
+}
+#mission h2{
+	color: #ffffff;
+}
+#mission p{
+	font-size: 24px;
+	font-weight: 300;
+	text-align: center;
+}
+/* Checkmarks */
+.bullet-item{
+	display: block;
+	margin: 0 auto;
 	margin-bottom: 25px;
-	text-transform: uppercase;
+	padding-bottom: 25px;
+	line-height: 32px;
+	color: #7f7f7f;
+	text-align: center;
+	background-repeat: no-repeat;
+}
+#checkmarks .bullet-item:last-child{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+.number-bullet{
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
+	margin-bottom: 5px;
+	line-height: 30px;
+	font-weight: bold;
+	font-family: 'Open Sans', Arial, sans-serif;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #72af24;
+	border-radius: 30px;
+	color: #72af24;
+	text-align: center;
+	text-decoration: none;
+}
+a.number-bullet:hover{
 	color: #303030;
+	border-color: #303030;
 }
-#benefits .column img{
+/* Five Minute Checkup */
+#five-minute-checkup{
+	padding-top: 0px;
+}
+#five-minute-checkup p{
+	text-align: center;
+}
+/* Trust */
+#trust{
+	background-color: #f0f0f0;
+	text-align: center;
+}
+#trust p{
+	text-align: left;
+}
+.award{
+	display: inline-block;
+	height: 100px;
+	margin: 0 auto;
 	margin-bottom: 25px;
+   
+}
+.award:last-child{
+	margin-left: 25px;
 }
 /* Statistics */
 #statistics{
@@ -403,7 +484,9 @@ label{
 	background-color: #7fb742;
 	cursor: pointer;
 }
-.button:hover{
+.button:hover,
+a:hover .button{
+	text-decoration: none;
 	background-color: #262626;
 }
 
@@ -418,10 +501,6 @@ label{
 	/* Feature */
 	li{
 		margin-bottom: 15px;
-	}
-	/* In the News */
-	#in-the-news img{
-		width: 100px;
 	}
 }
 /* Tablet */
@@ -453,41 +532,130 @@ label{
 		width: 200px;
 	}
 	/* Masthead */
-#lp-pom-box-33{
-	padding-top: 100px !important;
-  	padding-bottom: 100px !important;
-  }
-  	
-#lp-pom-text-24{
-	font-size: 48px !important;
-  }
+	#feature{
+		padding-top: 75px;
+		padding-bottom: 75px;
+	}
+	.sub-headline{
+		margin-bottom: 0px;
+		font-size: 30px;
+	}
+	.headline{
+		font-size: 60px;
+		line-height: 125%;
+	}
 	/* Content */
 	.article{
 		width: 575px;
 	}
-	/* Checkmarks */
-	#checkmarks{
+	/* Tagline */
+	#tagline{
+		padding: 50px 0px;
+	}
+	#tagline h2{
+		font-size: 24px;
+	}
+	/* Mistakes */
+	#mistakes{
+		text-align: left;
+	}
+	#mistakes .column-left{
+		max-width: 525px;
+		float: left;
+		width: 65%;
+	}
+	#mistakes .column-right{
+		float: right;
+		max-width: 474px;
+		width: 35%;
+		text-align: center;
+		padding-top: 50px;
+	}
+	#mistakes img{
+		width: 70%;
+	}
+	#mistakes .bullet-item{
+		text-align: left;
+		line-height: 30px;
+		position: relative;
+		margin-left: 40px;
+	}
+	#mistakes .bullet-item:last-child{
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+	#mistakes .number-bullet{
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: -3px;
+		left: -45px;
+		margin: 0 auto;
+		margin-bottom: 5px;
+		margin-right: 5px;
+		line-height: 30px;
+		font-weight: normal;
+		font-size: 24px;
+		font-family: 'Open Sans', Arial, sans-serif;
+		border-style: solid;
+		border-width: 2px;
+		border-color: #e48b29;
+		border-radius: 30px;
+		color: #e48b29;
 		text-align: center;
 	}
-	.checkmark{
+	/* Checkmarks */
+	#checkmarks{
+		padding-bottom: 25px;
+		text-align: center;
+	}
+	.bullet-item{
 		display: inline-block;
 		text-align: center;
 		width: auto;
 		margin: auto;
 		padding-right: 50px;
 	}
-	.checkmark:last-child{
+	.bullet-item:last-child{
 		padding-right: 0px;
 	}
-	/* Benefits */
-	#benefits .four-columns .column{
-		width: 38%;
-		height: 245px;
+	/* Five Minute Checkup */
+	#five-minute-checkup{
+		padding-top: 0px;
+		text-align: center;
+	}
+	#five-minute-checkup p{
+		display: block;
+		margin-right: 25px;
+		width: auto;
+	}
+	#five-minute-checkup .button{
+		display: block;
+	}
+	/* Trust */
+	#trust .column-right{
+		width: 60%;
 		float: left;
-		padding-right: 4%;
-		padding-left: 4%;
-		margin: 0px 2%;
+	}
+	#trust .column-left{
+		width: 18%;
+		padding-right: 2%;
+		float: left;
+		text-align: center;
+	}
+	#trust .column-left img,
+	#trust .column-rightmost img{
+		max-width: 100%;
+		margin: 0px;
 		margin-bottom: 25px;
+		padding: 0px 10px;
+	}
+	#trust .column-rightmost{
+		width: 18%;
+		padding-left: 2%;
+		float: right;
+		text-align: center;
 	}
 	/* Statistics */
 	#statistics{
@@ -526,15 +694,6 @@ label{
 	#logo{
 		margin-top: 0px;
 	}
-	/* Benefits */
-	#benefits .four-columns .column{
-		width: 19%;
-		height: 350px;
-		padding-right: 2%;
-		padding-left: 2%;
-		margin: 0px 1%;
-		margin-bottom: 50px;
-	}
 }
 /* Large Desktop */
 @media only screen and (min-width: 1000px){
@@ -562,79 +721,112 @@ END OF STYLESHEET
 		</a>
 	</div><!-- .content-wrapper -->
 </div>
-<!-- 
-
-
-END OF HEADER
-
-
--->
-<div id="tagline">
-	<h2>
-		Take Five Minutes and Get Your Retirement Account Back on Track
-	</h2>
-</div><!-- #tagline -->
-<div id="checkmarks">
+<div id="feature">
+	<div id="feature-background">
+	</div>
 	<div class="content-wrapper">
-		<div class="checkmark">
-			Fast
+		<p class="sub-headline">
+			my new year's resolution...
+		</p>
+		<h1 class="headline" id="main-headline">
+			finally accomplish a new year's resolution
+		</h1>
+		<a href="https://secure.blooom.com/FACEBOOK" class="button" id="primary-conversion">
+			get your <span class="strong">free checkup</span>
+		</a>
+	</div><!-- .content-wrapper -->
+</div><!-- #feature -->
+<div id="tagline" class="section">
+	<div class="content-wrapper">
+		<h2 id="main-tagline">
+			Take Five Minutes and Get Your Retirement Account Back on Track
+		</h2>
+	</div><!-- .content-wrapper -->
+</div><!-- #tagline -->
+<div id="mistakes" class="section">
+	<div class="content-wrapper">
+		<div class="row clearfix">
+			<div class="column-left">
+				<p>
+					People we've audited frequently make one or more of the following mistakes with their retirement account:
+				</p>
+				<div class="bullet-item">
+					<span class="number-bullet">$</span> Rack up hidden fees
+				</div>
+				<div class="bullet-item">
+					<span class="number-bullet">%</span> Pick the wrong percentage of stocks and bonds
+				</div>
+				<div class="bullet-item">
+					<span class="number-bullet">!</span> Take on too much risk
+				</div>
+			</div><!-- .column -->
+			<div class="column-right">
+				<p>
+					<strong>How are you doing?</strong>
+				</p>
+				<a href="https://secure.blooom.com/FACEBOOK" class="button">Get Your Free Checkup Today
+				</a>
+			</div>
+		</div><!-- .row -->
+	</div><!-- .content-wrapper -->
+</div><!-- #mistakes -->
+<div id="mission" class="section">
+	<div class="content-wrapper">
+		<h2>
+			Blooom's Mission
+		</h2>
+		<p>
+			"We exist to bring simplified financial services to the millions of neglected savers in this country." 
+		</p>
+	</div><!-- .content-wrapper -->
+</div><!-- #mission -->
+<div id="checkmarks" class="section">
+	<div class="content-wrapper">
+		<h2>
+			You're Just Three Quick Steps Away from peace of mind
+		</h2>
+		<div class="bullet-item">
+			<a href="https://secure.blooom.com/FACEBOOK" class="number-bullet">1</a> Tell us a little bit about you
 		</div>
-		<div class="checkmark">
-			Easy
+		<div class="bullet-item">
+			<a href="https://secure.blooom.com/FACEBOOK" class="number-bullet">2</a> Link up your retirement account
 		</div>
-		<div class="checkmark">
-			Free Analysis
+		<div class="bullet-item">
+			<a href="https://secure.blooom.com/FACEBOOK" class="number-bullet">3</a> Get your free checkup
 		</div>
 	</div><!-- .content-wrapper -->
 </div><!-- #checkmarks -->
-<div id="benefits">
+<div id="five-minute-checkup" class="section">
+	<div class="content-wrapper">
+		<p>
+			<strong>Have five minutes?</strong>
+		</p>
+		<a href="https://secure.blooom.com/FACEBOOK" class="button">Get your free checkup today</a>
+	</div>
+</div><!-- #five-minute-checkup -->
+<div id="trust" class="section">
 	<div class="content-wrapper">
 		<h2>
-			More benefits to you
+			Why should you trust blooom?
 		</h2>
-		<div class="columns four-columns clearfix">
-			<div class="column column-1">
-				<h3>
-					Peace of mind standard
-				</h3>
-				<img src="https://blooom-static.s3.amazonaws.com/lp/images/icon-peace-of-mind.png" alt="Peace Sign" />
+		<div class="row clearfix">
+			<div class="column-left">
+				<img src="https://blooom-static.s3.amazonaws.com/lp/images/fast-company-award.png" alt="Fast Company - 2015 Most Innovative Companies" class="award"/>
+			</div><!-- .column-left -->
+			<div class="column-right">
 				<p>
-					The second guessing and worrying ends here. You can rest easy knowing a professional advisor is handling things from here on out.
+					We are real advisors with real experience.
 				</p>
-			</div>
-			<div class="column column-2">
-				<h3>
-					FINANCE 101 NOT REQUIRED
-				</h3>
-				<img src="https://blooom-static.s3.amazonaws.com/lp/images/icon-101.png" alt="Mortarboard" />
 				<p>
-					No more poring over 401k investments that read like they are written in a foreign language. You can toss all that in the trash.
+					Blooom is a Registered Investment Advisory firm that was co-founded by a few guys that grew up in the Midwest. With over 30 years of cumulative experience in advising real people with portfolios that have ranged in value from $250 to $100,000,000, odds are we can help you too.
 				</p>
-			</div>
-			<div class="column column-3">
-				<h3>
-					YOU OWE IT TO YOURSELF
-				</h3>
-				<img src="https://blooom-static.s3.amazonaws.com/lp/images/icon-owe.png" alt="Coin" />
-				<p>
-					You and your family are going to depend on your 401k someday. You better get it right. And if you aren’t doing it, you better find someone to do it for you.
-				</p>
-			</div>
-			<div class="column column-4">
-				<h3>
-					BETTER RESULTS
-				</h3>
-				<img src="https://blooom-static.s3.amazonaws.com/lp/images/icon-results.png" alt="Graph" />
-				<p>
-					Professional advisory assistance has been shown to provide you with a greater potential long-term return. Of course, using your in-laws is still an option. We just think we’re better at it.
-				</p>
-			</div>
-		</div>
-		<a href="https://secure.blooom.com" class="button">
-			ONLY TAKES A FEW MINUTES, GIVE IT A TRY!
-		</a>
+			</div><!-- .column-right -->
+			<div class="column-rightmost">
+				<img src="https://blooom-static.s3.amazonaws.com/lp/images/finovate-award.png" alt="Finovate Fall 2014 Best of Show" class="award"/>
+			</div><!-- .column-right -->
+		</div><!-- .row -->
 	</div><!-- .content-wrapper -->
-</div><!-- #benefits -->
+</div><!-- #trust -->
 <div class="horizontal-slider" id="in-the-news">
 	<h2>
 		In The News
@@ -668,14 +860,6 @@ END OF HEADER
 			</p><!-- .number -->
 			<p class="definition">
 				Total Assets  <br/>Analyzed
-			</p><!-- .definition -->
-		</div><!-- .statistic -->
-		<div class="statistic">
-			<p class="number">
-				83%
-			</p><!-- .number -->
-			<p class="definition">
-				Retirement Accounts  <br/>Invested Incorrectly
 			</p><!-- .definition -->
 		</div><!-- .statistic -->
 	</div><!-- .content-wrapper -->
@@ -730,7 +914,7 @@ END OF HEADER
 				</li>
 			</ul>
 		</div><!-- .clearfix -->
-		<a href="https://secure.blooom.com/">Start my analysis</a>
+		<a href="https://secure.blooom.com/FACEBOOK">Get your free checkup today</a>
 	</div><!-- .content-wrapper -->
 </div><!-- #security -->
 <div id="footer">
@@ -750,9 +934,43 @@ END OF BODY
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
 $('document').ready(function(){
+	dynamic_masthead();
 	in_the_news_slider();
 	companies_slider();});
-
+function dynamic_masthead(){
+	$theme = getQueryVariable("blm");
+	if($theme){
+		$('#feature-background').css('background-image', 'url("https://blooom-static.s3.amazonaws.com/lp/images/new-years-masthead-4.jpg")');
+		$('.sub-headline').css('display', 'block');
+		switch($theme){
+			case "magazine":
+				$('#main-headline').html('read more trashy magazines*');
+				break
+			case "tv":
+				$('#main-headline').html('watch more<br/>reality tv*');
+				break
+			case "snooze":
+				$('#main-headline').html('hit snooze bar*');
+				break
+			case "worry":
+				$('#main-headline').html('worry less*');
+				break
+			default:
+				$('#main-headline').html('worry less*');
+		}
+		$('#main-tagline').html('* you earned it because you took 5 minutes to fix your retirement account');
+	}else{
+	}
+}
+function getQueryVariable(variable){
+   var query = window.location.search.substring(1);
+   var vars = query.split("&");
+   for (var i=0;i<vars.length;i++) {
+           var pair = vars[i].split("=");
+           if(pair[0] == variable){return pair[1];}
+   }
+   return(false);
+}
 function in_the_news_slider(){
 	$('#in-the-news .content-wrapper .image-container').animate({
 		left: "-140px"
